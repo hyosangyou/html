@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	 <link rel = "stylesheet" href = "../css/mycss.css" type = "text/css">
+	<style>
+		img{
+			width : 200px;
+			height : 200px;
+		}
+		#inputimg{
+			width : 100px;
+			height : 100px;
+		}
+		
+	</style>
+	
+	<script>
+		function aa(){
+			//window.alert("Hello :D")
+			
+			//변수 정의 let(=var : 이전에 쓰던 키워드), 타입을 적어줄 필요가 없다.
+			let userName = document.ff.name.value; 
+			let userId = document.ff.id.value;
+			let color = document.ff.color.value;
+			
+			//밑에 방법을 사용하면 이전에 작성된 form이 없어지고 해당 내용만 출력된다.
+			//document.write("이름 : " + userName + "<br>");
+			//document.write("아이디 : " + userId + "<br>");
+			//window.alert("이름 : " + userName + "\n" + "아이디 : " + userId +"\n색깔 : " + color);
+			//window.alert(color);
+			
+			//.body의 id이름을  이용한 접근
+			let by = document.getElementById('body');
+			//배경색 바꾸기
+			by.style.backgroundColor = color;
+			
+		}
+	</script>
+	
+</head>
+
+<body id = "body">
+<pre>
+form input 의 type
+text, password, radio, checkbox, file 
+img, submit, reset, button
+
+전송을 실행하는 요소 : 
+type = 'image'
+type = 'submot'
+
+type = 'button' : 아무런 기능이 없다, 기능을 부여하기 위해서 함수를 정의하고 호출한다.
+함수정의 : function aa(){}
+함수호출 : type = 'button' onclick = 'aa()'
+
+스크립트에서 html body 태그안에 요소로 접근하기 
+1. name을 이용해서 접근 / 입력된값을 가져오기
+   document.ff.name.value
+   document.ff.id.value
+2. id 이름으로 접근
+   document.getElementById('id이름')
+</pre>
+	
+	<form name = "ff" action="input_type.jsp" method = "post">
+		이름 : <input type = "text" name = "name" value = "이름"><br>
+		아이디 : <input type = "text" name = "id" value = "id"><br>
+		비밀번호 : <input type = "password" name = "pass" value = "123"><br>
+		주소 : <input type = "text" name = "addr" value = "대전"><br>
+		전화번호 : <input type = "text" name = "tel" value = "1234"><br>
+		성별 : <br>
+			<input type = "radio" name = "gender" value = "남자">남자<br>
+			<input type = "radio" name = "gender" value = "여자">여자<br>
+		좋아하는 음식 :<br> 
+			<input type = "checkbox" name = "food" value = "한식">한식<br>
+			<input type = "checkbox" name = "food" value = "중식">중식<br>
+			<input type = "checkbox" name = "food" value = "양식">양식<br>
+			<input type = "checkbox" name = "food" value = "일식">일식<br>
+			
+	       색상 : <input name = "color" type = "color"><br>
+	        		
+		파일 : <input type = "file" name = "file"><br>
+		
+			<input type = "hidden" name = "id2" value = "a001"><br>
+			<img name = "img" src = "../images/Penguins.jpg">
+			<hr>
+			<br>
+			전송하기(실행 : type = "image", type = "submit")<br>
+			<input id = "inputimg" type = "image" src = "../images/Penguins.jpg"><br>
+			<input type = "submit" value = "전송"><br>
+			<input type = "reset" value = "취소"><br>
+			<input type = "button" value = "확인" onclick = "aa()"><br> 
+	</form>
+</body>
+</html>

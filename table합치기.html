@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang = "ko">
+ <head>
+  <meta charset = "UTF-8">
+  <title></title>
+  <link rel = "stylesheet" href = "./css/mycss.css" type = "text/css">
+  
+  <style type = "text/css">
+    #tab1{
+	 border : 2px solid blue;
+	}
+	
+	
+	td{
+     width : 300px;
+     height : 50px;
+     text-align : center;
+     font-size : 2.0em;	 
+	}
+	
+	caption{
+	  font-size : 1.5em;
+	  margin-top : 20px;
+	  margin-bottom : 20px;
+	  caption-side : 
+	
+	}
+	#table2{
+	 border : 2px solid purple;
+	 margin : 50px auto;
+	 width : 80%;
+	 text-align : center;
+	
+	}
+	#table3{
+	 border : 2px solid blue;
+	}
+	#int{
+	width : 50%;
+	
+	}
+	
+  </style>
+ </head>
+ 
+ 
+ <body>
+  <pre>
+   
+    rowspan : 행병합, 세로로 병합
+	colspan : 열병합, 가로로 병합
+	
+  </pre>
+   <table id ="tab1" border ="1">
+    <caption>
+	 행과 열의 병합
+	</caption>
+    <tr>
+     <td>1</td>
+	 <td>2</td>
+	 <td>3</td>
+    </tr>
+   
+    <tr>
+     <td rowspan = "2">1</td>
+	 <td>2</td>
+	 <td>3</td>
+    </tr>
+   
+    <tr>
+	 <td>2</td>
+	 <td>3</td>
+    </tr>
+   
+    <tr>
+     <td colspan = "3">1</td>
+    </tr>
+  </table>
+  
+  <hr>
+   <table id = "table2" border ="1">
+    <caption>
+	 테이블 연습 2
+	</caption>
+    <tr>
+     <td colspan = "2"></td>
+	 <td colspan = "2"></td>
+	 <td></td>
+	 <td></td>
+    </tr>
+	
+	<tr>
+     <td colspan = "4"></td>
+	 <td colspan = "2"></td>
+    </tr>
+	
+    <tr>
+     <td colspan = "4"></td>
+	 <td rowspan = "2", colspan = "2"></td>
+    </tr>
+	
+	
+	<tr>
+     <td></td>
+	 <td></td>
+	 <td></td>
+	 <td></td>
+    </tr>
+   
+  </table>
+  
+  <hr>
+   <table id = "table3" border ="1">
+    <caption>
+	 테이블 연습 1
+	</caption>
+    <tr>
+	 <td colspan ="5">팽생교육원 강좌 소개 - 2019년도 1학기</td>
+    </tr>
+	
+	<tr>
+	 <td>강좌이름</td>
+	 <td>강의자</td>
+     <td id = "int">소개</td>
+	 <td>강좌코드</td>
+	 <td>실습비</td>
+    </tr>
+	
+    <tr>
+     <td>뎃생과 유화</td>
+	 <td>김철수</td>
+     <td>모든 미술 영역의 ... 지도합니다.</td>
+	 <td>H27</td>
+	 <td>100,000원</td>
+    </tr>
+	
+	<tr>
+     <td>바이올린</td>
+	 <td>홍길동</td>
+     <td>전반적인 현악기의 ... 연주할 수 있다.</td>
+	 <td>H28</td>
+	 <td>200,000원</td>
+    </tr>
+	
+	<tr>
+     <td>성악아카데미</td>
+	 <td>김호성</td>
+     <td>강의를 통해 ,,, 경험한다.</td>
+	 <td>H30</td>
+	 <td>300,000원</td>
+    </tr>
+   
+  </table>
+ </body>
+</html>
